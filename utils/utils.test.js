@@ -15,13 +15,17 @@ it("should return square value", () => {
 
 it("should have equal to number", () => {
   expect(27).toBe(27);
-  expect(typeof 27).toBe('number');
+  expect(typeof 27).toBe("number");
 });
 
 it("should have not equal to number", () => {
-    expect(27).not.toBe(57);
-  });
+  expect(27).not.toBe(57);
+});
 
-it("should have equal to objec", () => {
-    expect({name:'Yosuf'}).toEqual({name:'Yosuf'});
-  });
+it("should have equal to object", () => {
+  expect({ name: "Yousuf" }).toEqual({ name: "Yousuf" });
+});
+
+it("should have not equal to object", () => {
+  expect({ name: "Yosuf" }).not.toEqual({ name: "Yousuf" });
+});
