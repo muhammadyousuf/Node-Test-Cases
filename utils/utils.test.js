@@ -29,3 +29,12 @@ it("should have equal to object", () => {
 it("should have not equal to object", () => {
   expect({ name: "Yosuf" }).not.toEqual({ name: "Yousuf" });
 });
+
+it("should have include array value", () => {
+  expect([2,4,6]).toEqual(expect.arrayContaining([4]));
+});
+
+it("should have exculde array value", () => {
+  expect([2,4,6]).toEqual(expect.not.arrayContaining([7]));
+});
+
