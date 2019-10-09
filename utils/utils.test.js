@@ -31,10 +31,32 @@ it("should have not equal to object", () => {
 });
 
 it("should have include array value", () => {
-  expect([2,4,6]).toEqual(expect.arrayContaining([4]));
+  expect([2, 4, 6]).toEqual(expect.arrayContaining([4]));
 });
 
 it("should have exculde array value", () => {
-  expect([2,4,6]).toEqual(expect.not.arrayContaining([7]));
+  expect([2, 4, 6]).toEqual(expect.not.arrayContaining([7]));
 });
 
+it("should have include object value", () => {
+  expect({
+    name: "Yousuf",
+    age: 24,
+    city: "karachi",
+    country: "Pakistan"
+  }).toMatchObject({
+    age: 24,
+    country: "Pakistan"
+  });
+});
+
+it("should have exclude object value", () => {
+  expect({
+    name: "Yousuf",
+    age: 24,
+    city: "karachi"
+  }).not.toMatchObject({
+    age: 21,
+    country: "Pakistan"
+  });
+});
