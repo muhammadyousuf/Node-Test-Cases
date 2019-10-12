@@ -60,3 +60,9 @@ it("should have exclude object value", () => {
     country: "Pakistan"
   });
 });
+
+it("should have set user first and last name", () => {
+  let user = { city: 'karachi', age: 24 }
+  let res = utils.setName(user, 'Muhammad Yousuf');
+  expect(res).toMatchObject({ firstName: 'Muhammad', lastName: 'Yousuf' })
+});
