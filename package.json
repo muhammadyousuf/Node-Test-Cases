@@ -11,5 +11,8 @@
   "devDependencies": {
     "expect": "^24.9.0",
     "mocha": "^6.2.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
