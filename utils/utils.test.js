@@ -66,3 +66,17 @@ it("should have set user first and last name", () => {
   let res = utils.setName(user, 'Muhammad Yousuf');
   expect(res).toMatchObject({ firstName: 'Muhammad', lastName: 'Yousuf' })
 });
+
+it('should have asyn add two numbers', (done) => {
+    utils.asynAdd(4, 5, (sum) => {
+    expect(sum).toBe(9)
+    done();
+  })
+});
+
+it('should have asyn square number', (done) => {
+  utils.asynSqure(5, (square) => {
+    expect(square).toBe(25)
+    done();
+  })
+});
